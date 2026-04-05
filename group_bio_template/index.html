@@ -23,7 +23,7 @@
 <!-- Team bios section (default section) -->
 <div id="bios" class="container">
     <!-- Each card represents an individual team member -->
-    <div class="card">
+  <div class ="card">
         <h2>John Doe</h2>
         <p>Frontend Developer</p>
         <button onclick="toggleBio('bio1')">Show Bio</button>
@@ -37,19 +37,15 @@
             Rupesh is a computer science student at UNC Charlotte with a concentration in cybersecurity.
             I like working out, going rock climbing, hiking, and watching sci-fi shows in my downtime!
         </p>
+  </div>
+      <div class="card">
+        <img src="img/josh_logo.png" alt="Joshua McDaniel" class="profile-img">
         <h2>Joshua McDaniel</h2>
         <p>Data Science Student</p>
-        <button onclick="toggleBio('bio2')">Show Bio</button>
-        <p id="bio2" class="bio">I am a Computer Science student at UNC Charlotte with a concentration in Data Science. I enjoy
+        <button onclick="toggleBio('bio3', this)">Show Bio</button>
+        <p id="bio3" class="bio">I am a Computer Science student at UNC Charlotte with a concentration in Data Science. I enjoy
         working out, playing basketball, hiking, and watching shows like Invincible. </p>
     </div>
-    <div class="card">
-        <h2>Emily Johnson</h2>
-        <p>UI/UX Designer</p>
-        <button onclick="toggleBio('bio3')">Show Bio</button>
-        <p id="bio3" class="bio">Emily is a UI/UX designer with a passion for creating user-friendly interfaces.</p>
-    </div>
-</div>
 
 <!-- Team vision/mission statement section (hidden by default) -->
 <div id="vision" class="container" style="display: none;">

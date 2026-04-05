@@ -7,8 +7,10 @@ function toggleBio(bioId) {
     // Toggle between showing and hiding the bio section
     if (bio.style.display === "none" || bio.style.display === "") {
         bio.style.display = "block";
+        button.textContent = "Hide Bio";
     } else {
         bio.style.display = "none";
+        button.textContent = "Show Bio";
     }
 }
 
