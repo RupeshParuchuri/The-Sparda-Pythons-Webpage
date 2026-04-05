@@ -4,56 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Bio</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
-    <h1>Meet Our Team</h1>
-    <!-- Example team logo -->
-    <img src="img/team-logo.png" alt="Team Logo" class="team-logo">
+    <h1>The Sparda Pythons</h1>
+    <img src="img/josh_logo.png" alt="Team Logo" class="team-logo">
 
-    <!-- Navigation menu to switch between sections -->
     <nav>
         <button onclick="showSection('bios')">Team Bios</button>
         <button onclick="showSection('vision')">Team Vision</button>
     </nav>
 </header>
 
-<!-- Team bios section (default section) -->
 <div id="bios" class="container">
-    <!-- Each card represents an individual team member -->
-  <div class ="card">
-        <h2>John Doe</h2>
-        <p>Frontend Developer</p>
-        <button onclick="toggleBio('bio1')">Show Bio</button>
-        <p id="bio1" class="bio">John is a skilled frontend developer with 5 years of experience in creating responsive web applications.</p>
-    </div>
-    <div class="card">
-        <h2>Rupesh Paruchuri</h2>
-        <p>Fullstack Developer</p>
-        <button onclick="toggleBio('bio2')">Show Bio</button>
-        <p id="bio2" class="bio">
-            Rupesh is a computer science student at UNC Charlotte with a concentration in cybersecurity.
-            I like working out, going rock climbing, hiking, and watching sci-fi shows in my downtime!
-        </p>
-  </div>
-      <div class="card">
-        <img src="img/josh's_profile_pic.png" alt="Joshua McDaniel" class="profile-img">
+
+    <div class="card joshua-bio">
+        <img src="img/josh_profile_pic.png" alt="Joshua" class="avatar">
         <h2>Joshua McDaniel</h2>
         <p>Data Science Student</p>
-        <button onclick="toggleBio('bio3', this)">Show Bio</button>
-        <p id="bio3" class="bio">I am a Computer Science student at UNC Charlotte with a concentration in Data Science. I enjoy
-        working out, playing basketball, hiking, and watching shows like Invincible. </p>
+        <button onclick="toggleBio('bio1', this)">Show Bio</button>
+        <div id="bio1" class="bio">
+            <p>I am a Computer Science student at UNC Charlotte with a concentration in Data Science. I enjoy working out, playing basketball, hiking, and watching shows like Invincible.</p>
+        </div>
     </div>
 
-<!-- Team vision/mission statement section (hidden by default) -->
+    <div class="card rupesh-bio">
+        <img src="img/rupesh_avatar.png" alt="Rupesh" class="avatar">
+        <h2>Rupesh Paruchuri</h2>
+        <p>Computer Science Student</p>
+        <button onclick="toggleBio('bio2', this)">Show Bio</button>
+        <div id="bio2" class="bio">
+            <p>I am a computer science student at UNC Charlotte with a concentration in cybersecurity. I like working out, going rock climbing, hiking, and watching sci-fi shows in my downtime!</p>
+            <div class="moodboard">
+                <h3>Inspirations</h3>
+                <a href="https://github.com/RupeshParuchuri" target="_blank">
+                    <img src="img/github-logo.png" alt="GitHub" class="mood-icon">
+                </a>
+                <a href="https://react.dev/" target="_blank">
+                    <img src="img/react-logo.png" alt="ReactJS" class="mood-icon">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mouhamad-bio">
+        <img src="img/mouhamad-avatar.jpg" alt="Mouhamad" class="avatar">
+        <h2>Mouhamad Obeid</h2>
+        <p>Computer Science Student</p>
+        <button onclick="toggleBio('bio3', this)">Show Bio</button>
+        <div id="bio3" class="bio">
+            <p>I am a Computer Science student at UNC Charlotte with interests in cybersecurity, anime, and playing soccer. I enjoy watching shows, playing soccer, and eating meat!</p>
+            </div>
+        </div>
+    </div>
+
 <div id="vision" class="container" style="display: none;">
-    <h2>Our Mission Statement</h2>
-    <p>We strive to create a collaborative, inclusive, and innovative environment where team members feel empowered to push boundaries and achieve excellence in their craft. Our mission is to deliver high-quality solutions that meet and exceed our clients' expectations.</p>
+    <div class="vision-content">
+        <h2>Our Mission Statement</h2>
+        <p>We strive to create a collaborative, inclusive, and innovative environment where team members feel empowered to push boundaries and achieve excellence in their craft. Our mission is to deliver high-quality solutions that meet and exceed our clients' expectations.</p>
+
+        <h2>Team Rules</h2>
+        <ul class="team-rules">
+            <li>Communicate any concerns or questions in the Discord chat.</li>
+            <li>Meet twice a week to collaborate on group assignments and the final project.</li>
+            <li>Never push broken code directly to the main branch.</li>
+        </ul>
+    </div>
 </div>
 
-<script src="script.js"></script> <!-- Link to external JavaScript file -->
-
+<script src="script.js"></script>
 </body>
 </html>

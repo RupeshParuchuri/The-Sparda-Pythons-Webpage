@@ -1,16 +1,17 @@
 /**
  * Toggles the display of an individual team member's bio
  * @param {string} bioId - The ID of the bio section to show or hide
+ * @param {HTMLElement} btnElement - The button that was clicked
  */
-function toggleBio(bioId) {
+function toggleBio(bioId, btnElement) {
     const bio = document.getElementById(bioId);
-    // Toggle between showing and hiding the bio section
+
     if (bio.style.display === "none" || bio.style.display === "") {
         bio.style.display = "block";
-        button.textContent = "Hide Bio";
+        btnElement.textContent = "Hide Bio";
     } else {
         bio.style.display = "none";
-        button.textContent = "Show Bio";
+        btnElement.textContent = "Show Bio";
     }
 }
 
@@ -22,13 +23,10 @@ function showSection(sectionId) {
     const biosSection = document.getElementById("bios");
     const visionSection = document.getElementById("vision");
 
-    // Display the bios section and hide the vision section
     if (sectionId === "bios") {
         biosSection.style.display = "flex";
         visionSection.style.display = "none";
-    }
-    // Display the vision section and hide the bios section
-    else if (sectionId === "vision") {
+    } else if (sectionId === "vision") {
         biosSection.style.display = "none";
         visionSection.style.display = "block";
     }
