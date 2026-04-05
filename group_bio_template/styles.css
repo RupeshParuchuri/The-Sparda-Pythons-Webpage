@@ -1,90 +1,176 @@
+/* Import cohesive team font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 /* General page styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #121212; /* Dark theme to fit "Pythons" */
+    color: #e0e0e0;
     margin: 0;
     padding: 0;
 }
 
 /* Header section styling */
 header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
+    background: #1e1e1e;
+    color: #4CAF50; /* Python Green */
+    padding: 20px 0;
     text-align: center;
+    border-bottom: 3px solid #4CAF50;
 }
 
-/* Styling for team logo image */
 .team-logo {
-    width: 150px; /* Adjust the size as needed */
+    width: 150px;
     margin-top: 10px;
+    border-radius: 8px;
 }
 
-/* Menu button styling */
 header nav {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 header nav button {
-    background: #007BFF;
-    color: white;
+    background: #4CAF50;
+    color: #121212;
     border: none;
-    padding: 10px 15px;
+    font-weight: bold;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0 5px;
+    margin: 0 10px;
+    transition: background 0.3s;
 }
 
 header nav button:hover {
-    background: #0056b3;
+    background: #45a049;
 }
 
-/* Flex container for team bios and vision sections */
+/* Flex container for layouts */
 .container {
-    width: 80%;
-    margin: 20px auto;
+    width: 85%;
+    margin: 30px auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
 }
 
-/* Card styling for individual team bios */
+/* Base Card styling */
 .card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 25px;
     flex: 1 1 calc(30% - 40px);
     text-align: center;
-    transition: transform 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(76, 175, 80, 0.3);
+}
+
+/* Avatar styling */
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #fff;
+}
+
+/* Unique Bio Styling per teammate */
+.joshua-bio {
+    background: #1a237e; /* Deep Blue */
+    border-top: 5px solid #5c6bc0;
+}
+
+.rupesh-bio {
+    background: #b71c1c; /* Deep Red */
+    border-top: 5px solid #ef5350;
+}
+
+.mouhamad-bio {
+    background: #e65100; /* Deep Orange */
+    border-top: 5px solid #ff9800;
 }
 
 h2 {
-    margin: 0 0 10px;
+    margin: 0 0 5px;
+    color: #ffffff;
 }
 
-/* Initially hide bio details */
 .bio {
     display: none;
-    margin-top: 10px;
-    color: #555;
+    margin-top: 15px;
+    color: #cfcfcf;
+    line-height: 1.5;
 }
 
-/* Button styling */
-button {
-    background: #007BFF;
+/* Moodboard styling */
+.moodboard {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.moodboard h3 {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.mood-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.2s;
+}
+
+.mood-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Bio Buttons */
+.card button {
+    background: rgba(255, 255, 255, 0.1);
     color: white;
-    border: none;
-    padding: 10px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 15px;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
 }
 
-button:hover {
-    background: #0056b3;
+.card button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Vision & Mission Styling */
+.vision-content {
+    background: #1e1e1e;
+    padding: 40px;
+    border-radius: 12px;
+    border-left: 5px solid #4CAF50;
+    width: 100%;
+}
+
+.vision-content h2 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.vision-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.team-rules {
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #e0e0e0;
 }
