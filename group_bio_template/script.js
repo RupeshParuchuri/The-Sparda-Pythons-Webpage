@@ -3,35 +3,34 @@
  * @param {string} bioId - The ID of the bio section to show or hide
  *
  */
-function toggleBio(bioId) {
-    const bio = document.getElementById(bioId);
-    // Toggle between showing and hiding the bio section
+function toggleBio(bioId, btnElement) {
+    let bio = document.getElementById(bioId);
 
     if (bio.style.display === "none" || bio.style.display === "") {
         bio.style.display = "block";
-        button.textContent = "Hide Bio";
+        btnElement.innerText = "Hide Bio";
     } else {
         bio.style.display = "none";
-        button.textContent = "Show Bio";
+        btnElement.innerText = "Show Bio";
     }
 }
 
 /**
  * Shows the specified section ('bios' or 'vision') and hides the other
  * @param {string} sectionId - The ID of the section to display
+ *
  */
-function showSection(sectionId) {
-    const biosSection = document.getElementById("bios");
-    const visionSection = document.getElementById("vision");
 
-    // Display the bios section and hide the vision section
+function showSection(sectionId) {
+    let biosSection = document.getElementById("bios");
+    let visionSection = document.getElementById("vision");
+
     if (sectionId === "bios") {
         biosSection.style.display = "flex";
         visionSection.style.display = "none";
-    }
-    // Display the vision section and hide the bios section
-    else if (sectionId === "vision") {
+    } else if (sectionId === "vision") {
         biosSection.style.display = "none";
         visionSection.style.display = "block";
     }
 }
+
